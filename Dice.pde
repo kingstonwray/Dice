@@ -1,29 +1,24 @@
-void setup()
-{
-	noLoop();
+Die aDie;
+int cols;
+int rows;
+int offset = 20;
+int total = 0;
+void setup() {
+  size(1000, 1000);
+  cols = width/200;
+  rows = height/200-1;
+  aDie = new Die();
+  noLoop();
 }
-void draw()
-{
-	//your code here
-}
-void mousePressed()
-{
-	redraw();
-}
-class Die //models one single dice cube
-{
-	//variable declarations here
-	
-	Die(int x, int y) //constructor
-	{
-		//variable initializations here
-	}
-	void roll()
-	{
-		//your code here
-	}
-	void show()
-	{
-		//your code here
-	}
+void draw() {
+  total = 0;
+  for (int y = 0; y < rows; y++) {
+    System.out.println();
+    for ( int x = 0; x < cols; x++) {
+      aDie.curNum = aDie.roll();
+      total += aDie.curNum;
+      aDie.show(200*x, 200*y);
+    }
+  }
+  text("Total:"+total,200, 950);
 }
