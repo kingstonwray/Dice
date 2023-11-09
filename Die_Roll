@@ -23,6 +23,6 @@ class Die {
     rect(myX+10, myY+10, 180, 180);
     textSize(180);
     fill(0);
-    text(curNum, myX, myY+180);
+    text(curNum, myX+55, myY+160);
   }
 }
