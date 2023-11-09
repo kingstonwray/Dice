@@ -20,5 +20,5 @@ void draw() {
       aDie.show(200*x, 200*y);
     }
   }
-  text("Total:"+total,200, 950);
+  text("Total:"+total, 200, 950);
 }
