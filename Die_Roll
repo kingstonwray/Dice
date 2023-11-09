@@ -1,0 +1,28 @@
+class Die {
+  int sides;
+  int curNum;
+  int r, g, b, a;
+
+  Die() { // constructor
+    sides = 6;
+    r = (int)(Math.random()*256);
+    g = (int)(Math.random()*256);
+    b = (int)(Math.random()*256);
+    a = 80;
+    curNum = 0;
+  }
+  int roll() { // roll the die
+    int retVal;
+    retVal = (int)(Math.random()*6)+1;
+    return retVal;
+  }
+
+  void show(int myX, int myY) { // show the die
+    fill(255);
+    System.out.print(curNum + " ");
+    rect(myX+10, myY+10, 180, 180);
+    textSize(180);
+    fill(0);
+    text(curNum, myX, myY+180);
+  }
+}
